@@ -779,7 +779,7 @@ onMounted(() => {
     },
     title: {
       left: 'left',
-      text: '速度图表'
+      text: '流量视图 / Traffic view'
     },
     xAxis: {
       type: 'time',
