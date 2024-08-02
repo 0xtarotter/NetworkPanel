@@ -36,7 +36,7 @@
           <el-text size="small" class="mx-1">{{ state.maxUse ? '/' + formatter(state.maxUse, 0, [0, 0, 0, 0, 0, 0]) : ""
           }}</el-text>
           <el-button type="primary" style="height: 15px;" :icon="Edit" link @click="EditMaxVisible = true" />
-
+          <br />
           <!-- <div class="state-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="h-15 w-15 float-right pt-3">
@@ -60,7 +60,7 @@
             <br>
             每月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ state.predict.mon }}
           </el-popover>
-
+          <br />
           <!-- <div class="state-icon state-icon-main">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="h-15 w-15 float-right pt-3">
@@ -76,7 +76,7 @@
           <el-text size="small" class="mx-1">{{ state.maxSpeed ? '/' + formatter(state.maxSpeed, 2, [0, 0, 0, 0, 0, 0]) : ""
           }}</el-text>
           <el-button type="primary" style="height: 15px;" :icon="Edit" link @click="EditSpeedVisible = true" />
-
+          <br />
           <!-- <div class="state-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="h-15 w-15 float-right pt-3">
