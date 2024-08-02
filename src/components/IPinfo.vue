@@ -1,6 +1,6 @@
 <template>
     <div class="radius card" :style="{ borderRadius: `var(--el-border-radius-round)` }">
-        <div style="text-align: center;">
+        <div style="">
             <transition name="el-fade-in">
                 <div v-if="ipInfo.local && ipInfo.local.country && ipInfo.local.country.code == 'CN'">
                     <el-tooltip class="item" effect="dark" :content="ipInfo.local.ip" placement="top">
@@ -10,7 +10,7 @@
                             <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
                                 class="font-background">{{ ipInfo.local.show.join(" ") }}</el-text>
                         </div>
-                        1111
+
                     </el-tooltip>
                 </div>
             </transition>
@@ -23,7 +23,7 @@
                             <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
                                 class="font-background">{{ ipInfo.cloudflare.show.join(" ") }}</el-text>
                         </div>
-                        2222
+
                     </el-tooltip>
                 </div>
             </transition>
@@ -34,7 +34,7 @@
                             <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
                                 class="font-background">正在加载...</el-text>
                         </div>
-                        3333
+
                     </el-tooltip>
                 </div>
             </transition> 
