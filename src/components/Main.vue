@@ -120,9 +120,8 @@
 
 
       <el-button style="float: right;margin-top: -20px;margin-right: 3px" type="primary" :icon="TrendCharts" link
-        v-if="chartShow" @click="chartShow = false" />
-      <el-button style="float: right;margin-top: -20px;margin-right: 3px" type="primary" :icon="Hide" link
-        v-if="chartShow" @click="chartShow = false" />
+        v-if="chartShow">
+ 
       <div v-show="chartShow" ref="chartContainer" style="width: 100%; height: 400px;"></div>
     </div>
   </div>
