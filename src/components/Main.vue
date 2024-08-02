@@ -2,7 +2,7 @@
   <div class="radius card" :style="{ borderRadius: 'var(--el-border-radius-round)' }">
     <div style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">
       <div class="slider-demo-block">
-        <span class="font-background">测速地址：</span>
+        <span class="font-background">节点 / Nodes：</span>
         <el-button type="primary" :icon="CopyDocument" link @click="copyUrl" />
         <el-button type="primary" :icon="Edit" link @click="EditTableVisible = true" />
         <br>
@@ -18,20 +18,20 @@
         </el-select>
       </div>
       <div style="margin-top:20px;">
-        <span class="font-background">线程数：{{ threadNum }}</span>
+        <span class="font-background">线程数 / Threads：{{ threadNum }}</span>
         <el-slider :show-tooltip="false" :min="1" :max='64' v-model="threadNum" />
       </div>
       <div style="width: 100%;height:32px;">
         <div style="float: left;">
-          <el-switch v-model="runBackground" active-text="保持后台运行" />
+          <el-switch v-model="runBackground" active-text="保持后台运行 / Backstage" />
         </div>
         <div style="float: right;">
-          <el-switch v-model="autoStart" active-text="自动运行" />
+          <el-switch v-model="autoStart" active-text="自动运行 / Auto" />
         </div>
       </div>
       <div class="ItemContainer">
         <div class="showItem">
-          <span class="font-background" style="font-size: larger;">总流量</span>
+          <span class="font-background" style="font-size: larger;">消耗流量 / Consumed</span>
           <el-text size="small" class="mx-1">{{ state.maxUse ? '/' + formatter(state.maxUse, 0, [0, 0, 0, 0, 0, 0]) : ""
           }}</el-text>
           <el-button type="primary" style="height: 15px;" :icon="Edit" link @click="EditMaxVisible = true" />
@@ -45,7 +45,7 @@
           <el-text class="font-data">{{ state.show.allUsed }}</el-text>
         </div>
         <div class="showItem">
-          <span class="font-background" style="font-size: larger;">{{ isRunning ? '实时速度' : '平均速度' }}</span>
+          <span class="font-background" style="font-size: larger;">{{ isRunning ? '实时速度 / Real time' : '平均速度 / Average' }}</span>
           <el-popover placement="top-start" title="用量预测" :width="150" trigger="click">
             <template #reference>
               <el-button type="primary" style="height: 15px;vertical-align: -2px;" :icon="Calendar" link />
@@ -69,7 +69,7 @@
           <el-text class="font-data state-icon-main">{{ state.show.speed }}</el-text>
         </div>
         <div class="showItem">
-          <span class="font-background" style="font-size: larger;">带宽</span>
+          <span class="font-background" style="font-size: larger;">带宽 / Bandwidth</span>
           <el-text size="small" class="mx-1">{{ state.maxSpeed ? '/' + formatter(state.maxSpeed, 2, [0, 0, 0, 0, 0, 0]) : ""
           }}</el-text>
           <el-button type="primary" style="height: 15px;" :icon="Edit" link @click="EditSpeedVisible = true" />
