@@ -26,14 +26,6 @@
       <br>
       <MainUI :isVisible="isVisible" />
     </el-main>
-    <div style="height: fit-content;padding-bottom: 10px;">
-      <div style="width: fit-content;margin-left: auto;margin-right: auto;">
-	<a style=“font-size:6px”>Technical Support by </a>
-      </div>
-      <div style="width: fit-content;margin-left: auto;margin-right: auto;">
-      <a style=“font-size:6px”>netart</a>
-      </div>
-    </div>
   </el-container>
   <el-dialog align-center style="width: 90%;max-width: 700px;" v-model="downLoadAPPTableVisible" title="APP下载">
     <div>
