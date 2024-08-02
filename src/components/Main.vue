@@ -84,7 +84,11 @@
       </div>
 
       <div style="width: fit-content;display: block;margin-top:2ch;margin-left: auto;margin-right: auto;">
-<!-- dasd>
+
+
+
+
+        
         <a class="button" v-if="state.isChecking">
           <el-icon :size="60" class="is-loading el-icon-loading">
             <Loading />
