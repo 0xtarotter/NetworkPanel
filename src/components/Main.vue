@@ -1137,34 +1137,4 @@ IP END
 }
 
 
-
-
-
-
-.font-background {
-    color: #344357;
-    font-size: 14px;
-}
-
-.card {
-    max-width: 800px;
-    height: fit-content;
-    display: block;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 2%
-}
-
-@media (prefers-color-scheme: dark) {
-    .card {
-        background-color: rgb(18, 18, 18);
-    }
-
-    .font-background {
-        color: rgb(193, 206, 230);
-    }
-}
-
-
-
 </style>
