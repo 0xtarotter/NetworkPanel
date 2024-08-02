@@ -1,6 +1,6 @@
 <template>
     <div class="radius card" :style="{ borderRadius: `var(--el-border-radius-round)` }">
-        <div style="">
+        <div style="text-align: center;">
             <transition name="el-fade-in">
                 <div v-if="ipInfo.local && ipInfo.local.country && ipInfo.local.country.code == 'CN'">
                     <el-tooltip class="item" effect="dark" :content="ipInfo.local.ip" placement="top">
