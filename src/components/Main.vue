@@ -122,7 +122,7 @@
         <el-button style="float: left;margin-top: -20px;margin-left: 39px" type="primary" :icon="FullScreen" link
         @click="isFullScreen = true" /> -->
       <el-button style="float: right;margin-top: -20px;margin-right: 3px" type="primary" :icon="TrendCharts" link
-        v-if="!chartShow" @click="chartShow = true" />
+        v-if="chartShow" @click="chartShow = true" />
       <el-button style="float: right;margin-top: -20px;margin-right: 3px" type="primary" :icon="Hide" link
         v-if="chartShow" @click="chartShow = false" />
       <div v-show="chartShow" ref="chartContainer" style="width: 100%; height: 400px;"></div>
