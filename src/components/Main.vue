@@ -1,5 +1,5 @@
 <template>
- 
+ <iframe src="https://ip.skk.moe/simple" style="width: 100%; border: 0"></iframe>
   <div class="radius card" :style="{ borderRadius: 'var(--el-border-radius-round)' }">
     <div style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">
       <div class="slider-demo-block">
