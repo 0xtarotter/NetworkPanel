@@ -2,8 +2,7 @@
 
   <div class="radius card" :style="{ borderRadius: 'var(--el-border-radius-round)' }">
 
- <iframe src="https://ip.skk.moe/simple" style="width: 100%; border: 0"></iframe>
-   
+
     <div style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">
       <div class="slider-demo-block">
         <span class="font-background">节点/Node：</span>
