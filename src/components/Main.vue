@@ -1,51 +1,5 @@
 <template>
- <!-- 
-  IP
-  -->
-
-   <div class="radius card" :style="{ borderRadius: `var(--el-border-radius-round)` }">
-        <div style="text-align: center;">
-            <transition name="el-fade-in">
-                <div v-if="ipInfo.local && ipInfo.local.country && ipInfo.local.country.code == 'CN'">
-                    <el-tooltip class="item" effect="dark" :content="ipInfo.local.ip" placement="top">
-                        <div @click="copy(ipInfo.local.ip)">
-                            <el-tag style="width: 50px;" class="ml-2" type="success">{{
-                                ipInfo.layLocal?ipInfo.layLocal+"ms":"-ms" }}</el-tag>
-                            <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
-                                class="font-background">{{ ipInfo.local.show.join(" ") }}</el-text>
-                        </div>
-                    </el-tooltip>
-                </div>
-            </transition>
-            <transition name="el-fade-in">
-                <div v-if="ipInfo.cloudflare && ipInfo.cloudflare.country && ipInfo.cloudflare.country.code != 'CN'">
-                    <el-tooltip class="item" effect="dark" :content="ipInfo.cloudflare.ip" placement="top">
-                        <div @click="copy(ipInfo.cloudflare.ip)">
-                            <el-tag style="width: 50px;" class="ml-2" type="success">{{
-                                ipInfo.layCloudflare?ipInfo.layCloudflare+"ms":"-ms" }}</el-tag>
-                            <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
-                                class="font-background">{{ ipInfo.cloudflare.show.join(" ") }}</el-text>
-                        </div>
-                    </el-tooltip>
-                </div>
-            </transition>
-            <transition name="el-fade-in">
-                <div v-if="!ipInfo.local && !ipInfo.cloudflare" v-loading="true">
-                    <el-tooltip class="item" effect="dark" content="" placement="top">
-                        <div>
-                            <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
-                                class="font-background">正在加载...</el-text>
-                        </div>
-                    </el-tooltip>
-                </div>
-            </transition> 
-        </div>
-    </div>
-
-   <!-- 
-  IP END
-  -->
-  
+ 
   <div class="radius card" :style="{ borderRadius: 'var(--el-border-radius-round)' }">
     <div style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">
       <div class="slider-demo-block">
