@@ -22,9 +22,9 @@
       </div>
     </el-header>
     <el-main>
-      <MainUI :isVisible="isVisible" />
-      <br>
       <IPinfoUI :isVisible="isVisible" />
+      <br>
+      <MainUI :isVisible="isVisible" />
     </el-main>
     <div style="height: fit-content;padding-bottom: 10px;">
       <div style="width: fit-content;margin-left: auto;margin-right: auto;">
