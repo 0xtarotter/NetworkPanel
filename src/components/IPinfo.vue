@@ -22,19 +22,10 @@
                             <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
                                 class="font-background">{{ ipInfo.cloudflare.show.join(" ") }}</el-text>
                         </div>
-
-
-                <div v-if="!ipInfo.local && !ipInfo.cloudflare" v-loading="true">
-                    <el-tooltip class="item" effect="dark" content="" placement="top">
-                        <div>
-                            <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
-                                class="font-background">正在加载...</el-text>
-                        </div>
-                        
                     </el-tooltip>
                 </div>
             </transition>
-            <!-- <transition name="el-fade-in">
+            <transition name="el-fade-in">
                 <div v-if="!ipInfo.local && !ipInfo.cloudflare" v-loading="true">
                     <el-tooltip class="item" effect="dark" content="" placement="top">
                         <div>
@@ -44,7 +35,6 @@
                     </el-tooltip>
                 </div>
             </transition> 
-                        -->
         </div>
     </div>
 </template>
