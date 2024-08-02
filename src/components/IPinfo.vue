@@ -10,6 +10,7 @@
                             <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
                                 class="font-background">{{ ipInfo.local.show.join(" ") }}</el-text>
                         </div>
+                        1111
                     </el-tooltip>
                 </div>
             </transition>
@@ -22,6 +23,7 @@
                             <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
                                 class="font-background">{{ ipInfo.cloudflare.show.join(" ") }}</el-text>
                         </div>
+                        2222
                     </el-tooltip>
                 </div>
             </transition>
@@ -32,6 +34,7 @@
                             <el-text style="cursor: pointer;margin-left: 5px;white-space:nowrap;vertical-align: -1px;"
                                 class="font-background">正在加载...</el-text>
                         </div>
+                        3333
                     </el-tooltip>
                 </div>
             </transition> 
