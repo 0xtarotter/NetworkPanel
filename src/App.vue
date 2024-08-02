@@ -28,10 +28,10 @@
     </el-main>
     <div style="height: fit-content;padding-bottom: 10px;">
       <div style="width: fit-content;margin-left: auto;margin-right: auto;">
-	<a style=“font-size:8px; color:#E1E1E1;”>Technical Support by </a>
+	<a style=“font-size:6px”>Technical Support by </a>
       </div>
       <div style="width: fit-content;margin-left: auto;margin-right: auto;">
-      <a style=“font-size:8px; color:#E1E1E1;”>netart</a>
+      <a style=“font-size:6px”>netart</a>
       </div>
     </div>
   </el-container>
