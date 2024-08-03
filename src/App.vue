@@ -11,7 +11,7 @@
                 fill="#ffffff" p-id="4461"></path>
             </svg>
           </div>
-          <span class="title"> CesuWang - 网速测试，测网速，网络测速,Fast,Speedtest！ </span>
+          <span class="title"> Cesu.Wang </span>
         </div>
         <div style="float: right;margin-top: 5px;">
           <el-button class="home" @click="aboutVisible=true" round>关于</el-button>
