@@ -37,6 +37,7 @@
 	
 	</el-link>
       </div>
+	< !--
       <div style="width: fit-content;margin-left: auto;margin-right: auto;">
         <span style="color:var(--el-color-info);font-size: 12px;">
           本工具由
@@ -47,6 +48,7 @@
           提供CDN服务
         </span>
       </div>
+	    -->
     </div>
   </el-container>
   <el-dialog align-center style="width: 90%;max-width: 700px;" v-model="downLoadAPPTableVisible" title="APP下载">
