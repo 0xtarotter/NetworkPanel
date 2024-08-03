@@ -559,7 +559,7 @@ window.addEventListener("paste", function (e) {
 })
 var setTitle = (speed: number = 0) => {
   if (props.isVisible) {
-    document.title = '网络面板'
+    document.title = 'Cesu.Wang'
   } else {
     if (isRunning.value) {
       document.title = formatter(state.bytesUsed, 0, [0, 0, 0, 0, 0, 0]) + ' ' + formatter(speed, 1, [0, 0, 0, 0, 0, 0])
