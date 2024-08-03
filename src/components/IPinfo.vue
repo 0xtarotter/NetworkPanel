@@ -14,6 +14,13 @@
                     </el-tooltip>
                 </div>
             </transition>
+
+
+
+
+<br>
+
+            
             <transition name="el-fade-in">
                 <div v-if="ipInfo.cloudflare && ipInfo.cloudflare.country && ipInfo.cloudflare.country.code != 'CN'">
                     <el-tooltip class="item" effect="dark" :content="ipInfo.cloudflare.ip" placement="top">
@@ -27,6 +34,12 @@
                     </el-tooltip>
                 </div>
             </transition>
+                
+
+
+<br>
+
+          
             <transition name="el-fade-in">
                 <div v-if="!ipInfo.local && !ipInfo.cloudflare" v-loading="true">
                     <el-tooltip class="item" effect="dark" content="" placement="top">
