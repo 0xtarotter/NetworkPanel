@@ -11,7 +11,7 @@
                 fill="#ffffff" p-id="4461"></path>
             </svg>
           </div>
-          <span class="title"> 网络面板 </span>
+          <span class="title"> CesuWang - 网速测试，测网速，网络测速,Fast,Speedtest！ </span>
         </div>
         <div style="float: right;margin-top: 5px;">
           <el-button class="home" @click="aboutVisible=true" round>关于</el-button>
@@ -22,10 +22,27 @@
       </div>
     </el-header>
     <el-main>
-      <IPinfoUI :isVisible="isVisible" />
-      <br>
       <MainUI :isVisible="isVisible" />
+      <br>
+      <IPinfoUI :isVisible="isVisible" />
     </el-main>
+    <div style="height: fit-content;padding-bottom: 10px;">
+      <div style="width: fit-content;margin-left: auto;margin-right: auto;">
+        <el-link type="info" @click='open("https://netart.cn/")' target="_blank">Whoami</el-link>&nbsp;
+        <el-link type="info" @click='open("https://github.com/ljxi/NetworkPanel")' target="_blank">源码</el-link>&nbsp;
+        <el-link type="info" @click='open("https://github.com/ljxi/GeoCN")' target="_blank">IP离线库</el-link>
+      </div>
+      <div style="width: fit-content;margin-left: auto;margin-right: auto;">
+        <span style="color:var(--el-color-info);font-size: 12px;">
+          本工具由
+            <el-link style="vertical-align: -2px;" type="info" @click='open("https://www.kuocaicdn.com/register?code=8z8urvbg2ffd9")' target="_blank">
+              <img src="https://www.kuocaicdn.com/dashboard/assets/svg/logos/logo-short.svg" alt="括彩CDN" width="15" height="15">
+              括彩云智能CDN
+            </el-link>
+          提供CDN服务
+        </span>
+      </div>
+    </div>
   </el-container>
   <el-dialog align-center style="width: 90%;max-width: 700px;" v-model="downLoadAPPTableVisible" title="APP下载">
     <div>
