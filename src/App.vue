@@ -13,9 +13,11 @@
           </div>
           <span class="title"> Cesu.Wang </span>
         </div>
+	      <!--
         <div style="float: right;margin-top: 5px;">
           <el-button class="home" @click="aboutVisible=true" round>关于</el-button>
         </div>
+	      -->
         <div v-if="isAndroid" style="float: right;margin-top: 5px;margin-right: 5px;">
           <el-button class="home" @click="downLoadAPPTableVisible=true" round>APP</el-button>
         </div>
