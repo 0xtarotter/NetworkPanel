@@ -1,11 +1,8 @@
 <template>
-
   <div class="radius card" :style="{ borderRadius: 'var(--el-border-radius-round)' }">
-
-
     <div style="margin-top: 10px;margin-left: 10px;margin-right: 10px;">
       <div class="slider-demo-block">
-        <span class="font-background">节点/Node：</span>
+        <span class="font-background">测速地址：</span>
         <el-button type="primary" :icon="CopyDocument" link @click="copyUrl" />
         <el-button type="primary" :icon="Edit" link @click="EditTableVisible = true" />
         <br>
@@ -21,26 +18,23 @@
         </el-select>
       </div>
       <div style="margin-top:20px;">
-        <span class="font-background">线程数/Thread：{{ threadNum }}</span>
+        <span class="font-background">线程数：{{ threadNum }}</span>
         <el-slider :show-tooltip="false" :min="1" :max='64' v-model="threadNum" />
       </div>
       <div style="width: 100%;height:32px;">
         <div style="float: left;">
-          <el-switch v-model="runBackground" active-text="保持后台运行/Backstage" />
+          <el-switch v-model="runBackground" active-text="保持后台运行" />
         </div>
         <div style="float: right;">
-          <el-switch v-model="autoStart" active-text="自动运行/Auto" />
+          <el-switch v-model="autoStart" active-text="自动运行" />
         </div>
       </div>
       <div class="ItemContainer">
         <div class="showItem">
-          <span class="font-background" style="font-size: larger;">消耗流量/Consumed</span>
+          <span class="font-background" style="font-size: larger;">总流量</span>
           <el-text size="small" class="mx-1">{{ state.maxUse ? '/' + formatter(state.maxUse, 0, [0, 0, 0, 0, 0, 0]) : ""
           }}</el-text>
           <el-button type="primary" style="height: 15px;" :icon="Edit" link @click="EditMaxVisible = true" />
-
-          
-          <br />
           <div class="state-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="h-15 w-15 float-right pt-3">
@@ -48,12 +42,10 @@
                 d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
             </svg>
           </div>
-
-          
           <el-text class="font-data">{{ state.show.allUsed }}</el-text>
         </div>
         <div class="showItem">
-          <span class="font-background" style="font-size: larger;">{{ isRunning ? '实时速度 / Real time' : '平均速度 / Average' }}</span>
+          <span class="font-background" style="font-size: larger;">{{ isRunning ? '实时速度' : '平均速度' }}</span>
           <el-popover placement="top-start" title="用量预测" :width="150" trigger="click">
             <template #reference>
               <el-button type="primary" style="height: 15px;vertical-align: -2px;" :icon="Calendar" link />
@@ -66,29 +58,27 @@
             <br>
             每月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ state.predict.mon }}
           </el-popover>
-          <br />
-          <!-- <div class="state-icon state-icon-main">
+          <div class="state-icon state-icon-main">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="h-15 w-15 float-right pt-3">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
                 d="M16.469,8.924l-2.414,2.413c-0.156,0.156-0.408,0.156-0.564,0c-0.156-0.155-0.156-0.408,0-0.563l2.414-2.414c1.175-1.175,1.175-3.087,0-4.262c-0.57-0.569-1.326-0.883-2.132-0.883s-1.562,0.313-2.132,0.883L9.227,6.511c-1.175,1.175-1.175,3.087,0,4.263c0.288,0.288,0.624,0.511,0.997,0.662c0.204,0.083,0.303,0.315,0.22,0.52c-0.171,0.422-0.643,0.17-0.52,0.22c-0.473-0.191-0.898-0.474-1.262-0.838c-1.487-1.485-1.487-3.904,0-5.391l2.414-2.413c0.72-0.72,1.678-1.117,2.696-1.117s1.976,0.396,2.696,1.117C17.955,5.02,17.955,7.438,16.469,8.924 M10.076,7.825c-0.205-0.083-0.437,0.016-0.52,0.22c-0.083,0.205,0.016,0.437,0.22,0.52c0.374,0.151,0.709,0.374,0.997,0.662c1.176,1.176,1.176,3.088,0,4.263l-2.414,2.413c-0.569,0.569-1.326,0.883-2.131,0.883s-1.562-0.313-2.132-0.883c-1.175-1.175-1.175-3.087,0-4.262L6.51,9.227c0.156-0.155,0.156-0.408,0-0.564c-0.156-0.156-0.408-0.156-0.564,0l-2.414,2.414c-1.487,1.485-1.487,3.904,0,5.391c0.72,0.72,1.678,1.116,2.696,1.116s1.976-0.396,2.696-1.116l2.414-2.413c1.487-1.486,1.487-3.905,0-5.392C10.974,8.298,10.55,8.017,10.076,7.825">
               </path>
             </svg>
-          </div> -->
+          </div>
           <el-text class="font-data state-icon-main">{{ state.show.speed }}</el-text>
         </div>
         <div class="showItem">
-          <span class="font-background" style="font-size: larger;">带宽 / Bandwidth</span>
+          <span class="font-background" style="font-size: larger;">带宽</span>
           <el-text size="small" class="mx-1">{{ state.maxSpeed ? '/' + formatter(state.maxSpeed, 2, [0, 0, 0, 0, 0, 0]) : ""
           }}</el-text>
           <el-button type="primary" style="height: 15px;" :icon="Edit" link @click="EditSpeedVisible = true" />
-          <br />
-          <!-- <div class="state-icon">
+          <div class="state-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="h-15 w-15 float-right pt-3">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
-          </div> -->
+          </div>
           <el-text class="font-data">{{ state.show.speedBit }}</el-text>
         </div>
       </div>
@@ -116,25 +106,14 @@
           </svg>
         </a>
       </div>
-
-
-
-      
-
-
-
-
-
-
-
-       <!-- <el-button style="float: left;margin-top: -20px;margin-right: 3px" type="primary" :icon="Histogram" link
+      <el-button style="float: left;margin-top: -20px;margin-right: 3px" type="primary" :icon="Histogram" link
         @click="showMark.show = true" />
         <el-button style="float: left;margin-top: -20px;margin-left: 39px" type="primary" :icon="FullScreen" link
-        @click="isFullScreen = true" /> -->
+        @click="isFullScreen = true" />
       <el-button style="float: right;margin-top: -20px;margin-right: 3px" type="primary" :icon="TrendCharts" link
-        v-if="chartShow" @click="chartShow = true" />
+        v-if="!chartShow" @click="chartShow = true" />
       <el-button style="float: right;margin-top: -20px;margin-right: 3px" type="primary" :icon="Hide" link
-        v-if="!chartShow" @click="chartShow = false" />
+        v-if="chartShow" @click="chartShow = false" />
       <div v-show="chartShow" ref="chartContainer" style="width: 100%; height: 400px;"></div>
     </div>
   </div>
@@ -563,7 +542,7 @@ window.addEventListener("paste", function (e) {
 })
 var setTitle = (speed: number = 0) => {
   if (props.isVisible) {
-    document.title = 'Cesu.Wang'
+    document.title = '网络面板'
   } else {
     if (isRunning.value) {
       document.title = formatter(state.bytesUsed, 0, [0, 0, 0, 0, 0, 0]) + ' ' + formatter(speed, 1, [0, 0, 0, 0, 0, 0])
@@ -789,7 +768,7 @@ onMounted(() => {
     },
     title: {
       left: 'left',
-      text: '流量视图 / Traffic view'
+      text: '速度图表'
     },
     xAxis: {
       type: 'time',
@@ -871,8 +850,6 @@ onUnmounted(() => {
     myChart.dispose();
   }
 });
-
- 
 </script>
 <style scoped>
 .ItemContainer {
@@ -981,7 +958,4 @@ onUnmounted(() => {
   line-height: 144px;
   border-radius: 50%;
   box-shadow: 0px 3px 8px #485bed, inset 0px 2px 3px #6576ff;
-}
-
-
-</style>
+}</style>
