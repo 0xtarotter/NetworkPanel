@@ -38,14 +38,18 @@
           <el-text size="small" class="mx-1">{{ state.maxUse ? '/' + formatter(state.maxUse, 0, [0, 0, 0, 0, 0, 0]) : ""
           }}</el-text>
           <el-button type="primary" style="height: 15px;" :icon="Edit" link @click="EditMaxVisible = true" />
+
+          
           <br />
-          <!-- <div class="state-icon">
+          <div class="state-icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="h-15 w-15 float-right pt-3">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
             </svg>
-          </div> -->
+          </div>
+
+          
           <el-text class="font-data">{{ state.show.allUsed }}</el-text>
         </div>
         <div class="showItem">
