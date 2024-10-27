@@ -7,7 +7,15 @@
 		"联通电视":"NetworkPanelApi://listen.10155.com",
 		"联通公免":"https://m1.ad.10010.com/small_video/uploadImg/1669798519261.png",
 		"天翼云":"https://vod-origin-rjzy.gdoss.xstore.ctyun.cn/8ee30576c30d40518c4dae03f7eacf3c.mp4",
-		"天翼云桌面":"https://desk.ctyun.cn:8999/desktop-prod/software/windows_tob_client/15/64/202030001/CtyunClouddeskUniversal_2.3.0_202030001_x86_20240327104015_Setup.exe"
+		"天翼云桌面":"https://desk.ctyun.cn:8999/desktop-prod/software/windows_tob_client/15/64/202030001/CtyunClouddeskUniversal_2.3.0_202030001_x86_20240327104015_Setup.exe",
+		"百度":"https://game.gtimg.cn/images/nz/web202106/index/bc_part1.gif?0.3190485611376561",
+		"百度游戏":"https://gp-open-platform.cdn.bcebos.com/204403241901/a0a52008b7e5c5df5192f98fa6df1993/gp-open-platform/upload/file/img/d4f5c13dab6d8a68265a14f1ea5eee03.jpg",
+		"支付宝":"https://mdn.alipayobjects.com/ind_developertool/afts/file/A*fSAmSbgxLosAAAAAAAAAAAAADlx-AQ?af_fileName=AlipayKeyTool-2.0.3.dmg",
+		"阿里云CDN":"https://img.alicdn.com/imgextra/i1/O1CN01xA4P9S1JsW2WEg0e1_!!6000000001084-2-tps-2880-560.png",
+		"阿里GW":"https://gw.alicdn.com/tfscom/TB1fASCxhjaK1RjSZKzXXXVwXXa.jpg",
+		"腾讯游戏":"https://game.gtimg.cn/images/nz/web202106/index/bc_part1.gif?0.3190485611376561",
+		"腾讯wegame":"https://wegame.gtimg.com/g.55555-r.c4663/wegame-home/sc02-03.514d7db8.png",
+		"字节CDN":"https://lf9-cdn-tos.bytecdntp.com/cdn/yuntu-index/1.0.4/case/maiteng/detailbg.png"
 	},
 	"全球[Global]":{
 		"Cachefly":"https://web1.cachefly.net/speedtest/downloading",
